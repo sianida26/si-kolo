@@ -4,6 +4,7 @@ import App from './App'
 import './styles/tailwind.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import './styles/app.css'
+import './styles/fonts.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
