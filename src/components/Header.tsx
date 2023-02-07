@@ -1,14 +1,37 @@
 import { useState } from "react";
 import { Burger, Menu, Transition } from "@mantine/core";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
-interface Props{
-	background?: string
+interface Props {
+	background?: string;
 }
 
-export default function Header(props: Props) {
+const menus = [
+	{
+		to: "/",
+		text: "Beranda",
+	},
+	{
+		to: "/capaian-dan-tujuan-pembelajaran",
+		text: "Capaian dan Tujuan",
+	},
+	{
+		to: "/",
+		text: "Mind Map",
+	},
+	{
+		to: "/",
+		text: "Materi Pembelajaran",
+	},
+	{
+		to: "/",
+		text: "Mari Berlatih",
+	},
+];
 
-    const [openMenu, setOpenMenu] = useState(false);
+export default function Header(props: Props) {
+	const [openMenu, setOpenMenu] = useState(false);
 
 	return (
 		<header className="w-full">
@@ -35,38 +58,19 @@ export default function Header(props: Props) {
 						{(styles) => (
 							<div
 								style={styles}
-								className={`w-screen absolute left-0 top-20 py-4 flex flex-col border-b border-gray-800 text-primary items-center gap-4 text-lg ${ props.background || 'bg-[#d3eaf4]' }`}
+								className={`w-screen absolute left-0 top-20 py-4 flex flex-col border-b border-gray-800 text-primary items-center gap-4 text-lg ${
+									props.background || "bg-[#d3eaf4]"
+								}`}
 							>
-								<a
-									href="#"
-									className="px-4 text-center font-semibold"
-								>
-									Beranda
-								</a>
-								<a
-									href="#"
-									className="px-4 text-center font-semibold"
-								>
-									Capaian dan Tujuan
-								</a>
-								<a
-									href="#"
-									className="px-4 text-center font-semibold"
-								>
-									Mind Map
-								</a>
-								<a
-									href="#"
-									className="px-4 text-center font-semibold"
-								>
-									Materi Pembelajaran
-								</a>
-								<a
-									href="#"
-									className="px-4 text-center font-semibold"
-								>
-									Mari Berlatih
-								</a>
+								{menus.map((menu, i) => (
+									<Link
+										key={i}
+										to={menu.to}
+										className="px-4 text-center font-semibold"
+									>
+										{menu.text}
+									</Link>
+								))}
 								<Menu shadow="md" width={200}>
 									<Menu.Target>
 										<button className="bg-primary-f5 py-2 px-3 rounded-md text-white">
@@ -87,21 +91,15 @@ export default function Header(props: Props) {
 
 				{/* right side */}
 				<div className="hidden md:flex text-primary gap-4 items-center">
-					<a href="#" className="text-center font-semibold">
-						Beranda
-					</a>
-					<a href="#" className="text-center font-semibold">
-						Capaian dan Tujuan
-					</a>
-					<a href="#" className="text-center font-semibold">
-						Mind Map
-					</a>
-					<a href="#" className="text-center font-semibold">
-						Materi Pembelajaran
-					</a>
-					<a href="#" className="text-center font-semibold">
-						Mari Berlatih
-					</a>
+					{menus.map((menu, i) => (
+						<Link
+							key={i}
+							to={menu.to}
+							className="text-center font-semibold"
+						>
+							{menu.text}
+						</Link>
+					))}
 					<Menu shadow="md" width={200}>
 						<Menu.Target>
 							<button className="bg-primary-f5 py-2 px-3 rounded-md text-white">
