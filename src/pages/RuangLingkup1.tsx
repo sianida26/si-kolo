@@ -2,7 +2,15 @@ import { useState } from "react";
 import { Burger, Menu, Transition } from "@mantine/core";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
-// import maskot from "../assets/maskot.png";
+import judulRuangLingkup1 from "../assets/judulRuangLingkup1.png";
+import gambar1 from "../assets/gambar1.png";
+import gambar2 from "../assets/gambar2.png";
+import gambar3 from "../assets/gambar3.png";
+import gambar4 from "../assets/gambar4.png";
+import gambar5 from "../assets/gambar5.png";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { getPdfUrl } from "../utils/helper";
 
 export default function RuangLingkup1() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -11,151 +19,94 @@ export default function RuangLingkup1() {
     <div className="max-w-screen">
       <div className="w-full relative bg-[#0E66D2]  flex flex-col items-center">
         {/* Header */}
-        <header className="w-full">
-          <div className="max-w-screen-lg w-full mx-auto flex justify-between px-4 py-2 md:px-6">
-            {/* ganjel sm */}
-            <div className="md:hidden" />
+        <Header background="bg-[#0E66D2]"/>
+        <img src={judulRuangLingkup1} />
+      </div>
 
-            {/* logo */}
-            <img src={logo} alt="Logo Si-Kolo" className="w-14 object-cover" />
-
-            {/* menu icon */}
-            <div className="flex-center md:hidden">
-              <div className="px-1 py-0.5 border border-gray-800 text-gray-800 flex-center rounded-md">
-                <Burger
-                  onClick={() => setOpenMenu((prev) => !prev)}
-                  opened={openMenu}
-                />
-              </div>
-              <Transition mounted={openMenu} transition="scale-y">
-                {(styles) => (
-                  <div
-                    style={styles}
-                    className="w-screen absolute left-0 top-20 py-4 flex flex-col border-b border-gray-800 text-primary items-center gap-4 text-lg bg-[#d3eaf4]"
-                  >
-                    <a href="#" className="px-4 text-center font-semibold">
-                      Beranda
-                    </a>
-                    <Link
-                      to="/capaian-dan-tujuan-pembelajaran"
-                      className="px-4 text-center font-semibold"
-                    >
-                      Capaian dan Tujuan
-                    </Link>
-                    <a href="#" className="px-4 text-center font-semibold">
-                      Mind Map
-                    </a>
-                    <a href="#" className="px-4 text-center font-semibold">
-                      Materi Pembelajaran
-                    </a>
-                    <a href="#" className="px-4 text-center font-semibold">
-                      Mari Berlatih
-                    </a>
-                    <Menu shadow="md" width={200}>
-                      <Menu.Target>
-                        <button className="bg-primary-f5 py-2 px-3 rounded-md text-white">
-                          Lainnya
-                        </button>
-                      </Menu.Target>
-                      <Menu.Dropdown>
-                        <Menu.Item>Daftar Pustaka</Menu.Item>
-                        <Menu.Item>Profil Tim Pengembang</Menu.Item>
-                      </Menu.Dropdown>
-                    </Menu>
-                  </div>
-                )}
-              </Transition>
-            </div>
-
-            {/* right side */}
-            <div className="hidden md:flex text-primary gap-4 items-center">
-              <a href="#" className="text-center font-semibold">
-                Beranda
-              </a>
-              <Link
-                to="/capaian-dan-tujuan-pembelajaran"
-                className="text-center font-semibold"
-              >
-                Capaian dan Tujuan
-              </Link>
-              <a href="#" className="text-center font-semibold">
-                Mind Map
-              </a>
-              <a href="#" className="text-center font-semibold">
-                Materi Pembelajaran
-              </a>
-              <a href="#" className="text-center font-semibold">
-                Mari Berlatih
-              </a>
-              <Menu shadow="md" width={200}>
-                <Menu.Target>
-                  <button className="bg-primary-f5 py-2 px-3 rounded-md text-white">
-                    Lainnya
-                  </button>
-                </Menu.Target>
-                <Menu.Dropdown>
-                  <Menu.Item>Daftar Pustaka</Menu.Item>
-                  <Menu.Item>Profil Tim Pengembang</Menu.Item>
-                </Menu.Dropdown>
-              </Menu>
+      <div className="flex flex-col gap-5 bg-white px-4 md:px-8 py-8 max-w-screen-xl mx-auto">
+        <h1 className="text-primary font-bold underline text-2xl">
+          PENDAHULUAN
+        </h1>
+        <div className="flex flex-col md:flex-row gap-3 w-full">
+          <div className="flex flex-col md:flex-row gap-2 md:flex-shrink-0">
+            <img src={gambar1} className="md:w-28 lg:w-36 md:self-start" />
+            <img src={gambar2} className="md:w-28 lg:w-36 md:self-start" />
+          </div>
+          <div className="">
+            <span>
+              Sebelum memasuki bagaimana kalian mengetahui koloid, ingat kembali
+              pemahaman kalian mengenai campuran. Pada campuran terbagi menjadi
+              dua yaitu homogen dan heterogen. Untuk membedakan kedua hal
+              tersebut tentunya kalian sudah sangat paham bagaimana ciri-ciri
+              keduanya, seperti air gula yang termasuk ke dalam campuran homogen
+              karena tidak terlihat lagi perbedaan komponennya, dan pada kopi
+              tentunya merupakan contoh dari campuran heterogen. Kopi sekilas
+              tampak campuran dari bubuk kopi dan air panas yang menyatu bukan?
+              namun apa yang terjadi jika didiamkan beberapa saat? kopi tersebut
+              akan terlihat sisa-sisa bubuk yang tidak terlarut.{" "}
+            </span>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row gap-3 w-full">
+          <div className="flex flex-col gap-2 md:flex-shrink-0">
+            <img src={gambar3} className="md:w-56 lg:w-72 md:self-center" />
+            <div className="flex flex-col md:flex-row gap-2 md:flex-shrink-0">
+              <img
+                src={gambar4}
+                className="md:w-28 lg:w-36 md:h-52 md:self-start"
+              />
+              <img
+                src={gambar5}
+                className="md:w-28 lg:w-36 md:h-52 md:self-start"
+              />
             </div>
           </div>
-        </header>
+          <div>
+            <p className="">
+              Jika kalian sudah memahami apa yang membedakan campuran homogen
+              dan heterogen, maka akan timbul dalam diri kalian, bagaimana jika
+              terdapat minuman yang sebenarnya sekilas memiliki endapan
+              didalamnya namun tidak pernah mengendap? Perhatikan susu di
+              samping, jika kalian perhatikan maka susu merupakan larutan atau
+              campuran homogen yang terdiri dari bubuk susu dan air yang
+              melarutkan. Namun, saat kalian perhatikan susu yang dituangkan air
+              panas akan menggumpal sebelum diaduk bukan? Susu yang sekilas
+              tampak seperti homogen jika kita saring menggunakan saringan halus
+              maka akan terpisahkan komponen susu dan air susunya seperti pada
+              gambar. Yang menjadi pertanyaan adalah bagaimana bisa jika susu
+              memiliki endapan didalamnya namun tidak sekalipun mengendap di
+              bagian bawah dan justru tampak terlarut dalam air? Dari
+              perumpamaan susu dan kopi diatas, yang terjadi dengan susu
+              merupakan contoh dari koloid. Untuk memahami lebih jelas bagaimana
+              kaitannya sistem koloid dan jenis-jenis koloid dalam ruang lingkup
+              1, silahkan simak dan pelajari bahan ajar dan lkpd yang sudah
+              disediakan di bawah.
+            </p>
+          </div>
+        </div>
+      </div>
 
-        
+      <div className="flex flex-col gap-5 bg-white px-4 md:px-8 py-8 max-w-screen-xl mx-auto">
+        <h1 className="text-primary font-bold underline text-2xl">VIDEO PEMBELAJARAN</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <iframe src="https://www.youtube.com/embed/UktHPe4oQLc" className="w-full aspect-video"></iframe>
+            <iframe src="https://www.youtube.com/embed/QLjMB2YSgWQ" className="w-full aspect-video"></iframe>
+            <iframe src="https://www.youtube.com/embed/V7IOq2DFwns" className="w-full aspect-video"></iframe>
+            <div className="hidden lg:flex"></div>
+            <iframe src="https://www.youtube.com/embed/XGxYr4HnyLk" className="w-full aspect-video"></iframe>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-5 bg-white px-4 md:px-8 py-8 mb-5 max-w-screen-xl mx-auto">
+        <h1 className="text-primary font-bold underline text-2xl">BAHAN AJAR & LKPD</h1>
+        <div className="flex flex-col md:flex-row gap-5 w-full mx-auto items-center justify-around">
+            <iframe src={getPdfUrl("example.pdf")} className="w-full h-96 md:w-[560px] md:h-[620px]" ></iframe>
+            <iframe src={getPdfUrl("example.pdf")} className="w-full h-96 md:w-[560px] md:h-[620px]" ></iframe>
+        </div>
       </div>
 
       {/* footer */}
-      <footer className="bg-[#afcbd6] w-full">
-        <div className="flex max-w-screen-xl mx-auto flex-col-reverse px-4 py-4 gap-6 md:flex-row">
-          <div className="flex-center">
-            <img
-              src={logo}
-              alt="Logo Si-KOLO"
-              className="w-12 object-cover md:w-32"
-            />
-          </div>
-          <div className="flex flex-col gap-4 md:flex-grow">
-            <div className="flex flex-col gap-6 lg:flex-row lg:justify-between">
-              <div className="text-center">
-                <p className="text-2xl font-black">Kelompok Peminatan MIPA</p>
-                <p className="text-xl font-medium lg:whitespace-nowrap">
-                  Untuk SMA/MA/Sederajat Kelas XI Fase F
-                </p>
-              </div>
-              <div className="flex flex-col text-center lg:items-end">
-                <p className="text-lg font-medium text-primary lg:text-right">
-                  Ada Pertanyaan?
-                </p>
-                <p className="text-sm lg:text-right">
-                  Hubungi Cp Sosmed untuk mendapatkan informasi selengkapnya
-                  mengenai project ini
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col-reverse gap-2 lg:flex-row lg:justify-end lg:items-center">
-              <div className="flex justify-center gap-2 lg:order-2">
-                {["instagram", "twitter", "facebook", "share-fill"].map(
-                  (x, i) => (
-                    <button
-                      key={i}
-                      className="flex-center w-8 h-8 rounded-full self-center border border-black"
-                    >
-                      <i className={`bi bi-${x}`}></i>
-                    </button>
-                  )
-                )}
-              </div>
-              <p className="text-xs text-center lg:order-1">
-                Share this website content to your community/agency
-              </p>
-              <button className="bg-gradient-to-l from-[#f082c2] to-[#d1579d] px-3 py-2 rounded-lg text-white self-center font-medium lg:order-3">
-                Ajukan Pertanyaan
-              </button>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
