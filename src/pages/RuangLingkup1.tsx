@@ -17,9 +17,8 @@ export default function RuangLingkup1() {
 
   return (
     <div className="max-w-screen">
-      <div className="w-full relative bg-[#0E66D2] flex flex-col items-center">
-        {/* Header */}
-        <Header background="bg-[#0E66D2]"/>
+      <div className="bg-ruang-lingkup">
+        <Header background="bg-[#0E66D2]" />
         <img src={judulRuangLingkup1} />
       </div>
 
@@ -87,21 +86,43 @@ export default function RuangLingkup1() {
       </div>
 
       <div className="flex flex-col gap-5 bg-white px-4 md:px-8 py-8 max-w-screen-xl mx-auto">
-        <h1 className="text-primary font-bold underline text-2xl">VIDEO PEMBELAJARAN</h1>
+        <h1 className="text-primary font-bold underline text-2xl">
+          VIDEO PEMBELAJARAN
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            <iframe src="https://www.youtube.com/embed/UktHPe4oQLc" className="w-full aspect-video"></iframe>
-            <iframe src="https://www.youtube.com/embed/QLjMB2YSgWQ" className="w-full aspect-video"></iframe>
-            <iframe src="https://www.youtube.com/embed/V7IOq2DFwns" className="w-full aspect-video"></iframe>
-            <div className="hidden lg:flex"></div>
-            <iframe src="https://www.youtube.com/embed/XGxYr4HnyLk" className="w-full aspect-video"></iframe>
+          <iframe
+            src="https://www.youtube.com/embed/UktHPe4oQLc"
+            className="w-full aspect-video"
+          ></iframe>
+          <iframe
+            src="https://www.youtube.com/embed/QLjMB2YSgWQ"
+            className="w-full aspect-video"
+          ></iframe>
+          <iframe
+            src="https://www.youtube.com/embed/V7IOq2DFwns"
+            className="w-full aspect-video"
+          ></iframe>
+          <div className="hidden lg:flex"></div>
+          <iframe
+            src="https://www.youtube.com/embed/XGxYr4HnyLk"
+            className="w-full aspect-video"
+          ></iframe>
         </div>
       </div>
 
       <div className="flex flex-col gap-5 bg-white px-4 md:px-8 py-8 mb-5 max-w-screen-xl mx-auto">
-        <h1 className="text-primary font-bold underline text-2xl">BAHAN AJAR & LKPD</h1>
+        <h1 className="text-primary font-bold underline text-2xl">
+          BAHAN AJAR & LKPD
+        </h1>
         <div className="flex flex-col md:flex-row gap-5 w-full mx-auto items-center justify-around">
-            <iframe src={getPdfUrl("example.pdf")} className="w-full h-96 md:w-[560px] md:h-[620px]" ></iframe>
-            <iframe src={getPdfUrl("example.pdf")} className="w-full h-96 md:w-[560px] md:h-[620px]" ></iframe>
+          <iframe
+            src={getPdfUrl("example.pdf")}
+            className="w-full h-96 md:w-[560px] md:h-[620px]"
+          ></iframe>
+          <iframe
+            src={getPdfUrl("example.pdf")}
+            className="w-full h-96 md:w-[560px] md:h-[620px]"
+          ></iframe>
         </div>
       </div>
 

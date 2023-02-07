@@ -15,8 +15,7 @@ export default function RuangLingkup3() {
 
   return (
     <div className="max-w-screen">
-      <div className="w-full relative bg-[#0E66D2] flex flex-col items-center">
-        {/* Header */}
+      <div className="bg-ruang-lingkup">
         <Header background="bg-[#0E66D2]" />
         <img src={judulRuangLingkup3} />
       </div>
