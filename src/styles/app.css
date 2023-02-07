@@ -1,3 +1,10 @@
 .times{
     font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; 
-};
+}
+
+.bg-ruang-lingkup{
+    background-image: url("../assets/noise.png");
+    background-size: 1% auto;
+    /* background-repeat: no-repeat; */
+    background-color: #0E66D2 /* url(../assets/img-noise-361x370.png) no-repeat fixed center !important */;
+}
