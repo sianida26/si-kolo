@@ -34,16 +34,16 @@ export default function Header(props: Props) {
 	const [openMenu, setOpenMenu] = useState(false);
 
 	const dropdownMenu = () => (
-		<Menu shadow="md" width={200}>
+		<Menu shadow="md" width={200} >
 			<Menu.Target>
-				<button className="bg-primary-f5 py-2 px-3 rounded-md text-white">
+				<button className="bg-primary-f5 py-2 px-3 rounded-md text-white montserrat">
 					Lainnya
 				</button>
 			</Menu.Target>
 			<Menu.Dropdown>
-				<Menu.Item>Daftar Pustaka</Menu.Item>
+				<Menu.Item className="montserrat">Daftar Pustaka</Menu.Item>
 				<Menu.Item>
-					<Link to="/profil">
+					<Link to="/profil" className="montserrat">
 						Profil Tim Pengembang
 					</Link>
 				</Menu.Item>
@@ -76,7 +76,7 @@ export default function Header(props: Props) {
 						{(styles) => (
 							<div
 								style={styles}
-								className={`w-screen absolute left-0 top-20 py-4 flex flex-col border-b border-gray-800 text-primary items-center gap-4 text-lg ${
+								className={`w-screen absolute left-0 top-20 py-4 gilroy-extrabold flex flex-col border-b border-gray-800 text-primary items-center gap-4 text-lg ${
 									props.background || "bg-[#d3eaf4]"
 								}`}
 							>

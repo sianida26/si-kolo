@@ -23,7 +23,7 @@ export default function RuangLingkup1() {
       </div>
 
       <div className="flex flex-col gap-5 bg-white px-4 md:px-8 py-8 max-w-screen-xl mx-auto">
-        <h1 className="text-primary font-bold underline text-2xl">
+        <h1 className="text-primary font-bold underline text-3xl md:text-4xl judul">
           PENDAHULUAN
         </h1>
         <div className="flex flex-col md:flex-row gap-3 w-full">
@@ -31,7 +31,7 @@ export default function RuangLingkup1() {
             <img src={gambar1} className="md:w-28 lg:w-36 md:self-start" />
             <img src={gambar2} className="md:w-28 lg:w-36 md:self-start" />
           </div>
-          <div className="">
+          <div className="arial">
             <span>
               Sebelum memasuki bagaimana kalian mengetahui koloid, ingat kembali
               pemahaman kalian mengenai campuran. Pada campuran terbagi menjadi
@@ -61,7 +61,7 @@ export default function RuangLingkup1() {
             </div>
           </div>
           <div>
-            <p className="">
+            <p className="arial">
               Jika kalian sudah memahami apa yang membedakan campuran homogen
               dan heterogen, maka akan timbul dalam diri kalian, bagaimana jika
               terdapat minuman yang sebenarnya sekilas memiliki endapan
@@ -86,7 +86,7 @@ export default function RuangLingkup1() {
       </div>
 
       <div className="flex flex-col gap-5 bg-white px-4 md:px-8 py-8 max-w-screen-xl mx-auto">
-        <h1 className="text-primary font-bold underline text-2xl">
+        <h1 className="text-primary font-bold underline text-3xl md:text-4xl judul">
           VIDEO PEMBELAJARAN
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -111,7 +111,7 @@ export default function RuangLingkup1() {
       </div>
 
       <div className="flex flex-col gap-5 bg-white px-4 md:px-8 py-8 mb-5 max-w-screen-xl mx-auto">
-        <h1 className="text-primary font-bold underline text-2xl">
+        <h1 className="text-primary font-bold underline text-3xl md:text-4xl judul">
           BAHAN AJAR & LKPD
         </h1>
         <div className="flex flex-col md:flex-row gap-5 w-full mx-auto items-center justify-around">

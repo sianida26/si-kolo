@@ -21,7 +21,7 @@ export default function RuangLingkup3() {
       </div>
 
       <div className="flex flex-col gap-5 bg-white px-4 md:px-8 py-8 max-w-screen-xl mx-auto">
-        <h1 className="text-primary font-bold underline text-2xl">
+        <h1 className="text-primary font-bold underline text-3xl md:text-4xl judul">
           PENDAHULUAN
         </h1>
         <div className="flex flex-col md:flex-row gap-3 w-full">
@@ -38,7 +38,7 @@ export default function RuangLingkup3() {
             </div>
             <img src={gambar3} className="md:w-72 lg:w-96 md:self-center" />
           </div>
-          <div className="">
+          <div className="arial">
             <p>
               Pembelajaran demi pembelajaran sudah kalian lalui, sekarang
               saatnya memasuki ruang lingkup 3. Pada ruang lingkup ini mengajak
@@ -65,7 +65,7 @@ export default function RuangLingkup3() {
       </div>
 
       <div className="flex flex-col gap-5 bg-white px-4 md:px-8 py-8 max-w-screen-xl mx-auto">
-        <h1 className="text-primary font-bold underline text-2xl">
+        <h1 className="text-primary font-bold underline text-3xl md:text-4xl judul">
           VIDEO PEMBELAJARAN
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -90,7 +90,7 @@ export default function RuangLingkup3() {
       </div>
 
       <div className="flex flex-col gap-5 bg-white px-4 md:px-8 py-8 mb-5 max-w-screen-xl mx-auto">
-        <h1 className="text-primary font-bold underline text-2xl">
+        <h1 className="text-primary font-bold underline text-3xl md:text-4xl judul">
           BAHAN AJAR & LKPD
         </h1>
         <div className="flex flex-col md:flex-row gap-5 w-full mx-auto items-center justify-around">

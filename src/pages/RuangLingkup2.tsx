@@ -8,16 +8,16 @@ import { getPdfUrl } from "../utils/helper";
 
 export default function RuangLingkup2() {
 	return (
-		<div className="w-screen">
+		<div className="max-w-screen">
 			<div className="bg-ruang-lingkup">
 				<Header background="bg-[#0E66D2]" />
 				<img src={judulRuangLingkup2} />
 			</div>
 			<div className="flex flex-col gap-5 px-4 py-8 max-w-screen-xl mx-auto">
-				<h1 className="text-primary font-bold text-2xl underline">
+				<h1 className="text-primary font-bold text-3xl md:text-4xl judul underline">
 					PENDAHULUAN
 				</h1>
-				<div className="flex flex-col md:flex-row">
+				<div className="flex flex-col md:flex-row arial">
 					<div className="flex flex-col gap-2 px-4 md:flex-row md:flex-shrink-0 md:items-start">
 						<img src={illustration25} alt="Ilustrasi susu" className="md:w-32" />
 						<div className="flex flex-col gap-2">
@@ -44,11 +44,11 @@ export default function RuangLingkup2() {
 					</p>
 				</div>
 
-				<h1 className="text-primary font-bold text-2xl underline">
+				<h1 className="text-primary font-bold text-3xl md:text-4xl judul underline mt-4">
 					VIDEO PEMBELAJARAN
 				</h1>
 
-				<div className="">
+				<div className="mb-8">
 					<div className="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-6">
 						<iframe
 							src="https://www.youtube.com/embed/XEAiLm2zuvc"
@@ -73,10 +73,10 @@ export default function RuangLingkup2() {
 					</div>
 				</div>
 
-				<h1 className="text-primary font-bold text-2xl underline">
+				<h1 className="text-primary font-bold text-3xl md:text-4xl judul underline">
 					BAHAN AJAR & LKPD
 				</h1>
-				<div className="flex flex-col gap-4 md:flex-row">
+				<div className="flex flex-col gap-4 md:flex-row justify-around">
 					<iframe
 						src={getPdfUrl("example.pdf")}
 						className="w-full h-96 md:w-[560px] md:h-[620px]"

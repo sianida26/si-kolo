@@ -31,7 +31,7 @@ export default function LandingPage() {
 				<Header />
 				<div className="flex-grow flex flex-col justify-center py-8 md:flex-row max-w-screen-xl">
 					<div className="flex flex-col text-primary-f0 font-bold px-4 md:justify-center md:px-6">
-						<div className="text-4xl text-center flex items-center justify-center md:justify-start md:text-7xl">
+						<div className="text-4xl text-center blogger-sans flex items-center justify-center md:justify-start md:text-7xl">
 							S
 							<img
 								src={maskot}
@@ -40,10 +40,10 @@ export default function LandingPage() {
 							/>{" "}
 							- <span className="text-primary-e8">KOLO</span>
 						</div>
-						<h2 className="text-2xl md:text-3xl text-center md:text-left">
+						<h2 className="text-2xl md:text-3xl blogger-sans text-center md:text-left">
 							Sistem Koloid #KimiAsyik
 						</h2>
-						<p className="text-black font-normal text-center mt-4 md:text-left">
+						<p className="text-black font-normal montserrat text-center mt-4 md:text-left">
 							<strong className="text-primary">Si-KOLO</strong>{" "}
 							merupakan terobosan pengembangan media pembelajaran
 							online berbasis website yang dikembangkan oleh
@@ -63,7 +63,7 @@ export default function LandingPage() {
 
 			{/* mind map */}
 			<section id="mind-map" className="py-8 w-full">
-				<h1 className="text-center text-2xl text-primary underline underline-offset-8 font-bold px-4 leading-normal">
+				<h1 className="text-center text-3xl md:text-4xl tracking-wider haettenschweiler text-primary underline underline-offset-8 font-bold px-4 leading-normal">
 					Mind Map Ruang Lingkup Kimia Koloid
 				</h1>
 				<div className="flex flex-col px-4 mt-4 md:flex-row w-full md:gap-2 max-w-screen-xl mx-auto md:items-center">
@@ -72,8 +72,8 @@ export default function LandingPage() {
 						alt="Mindmap"
 						className="w-full md:flex-shrink md:w-2/3 object-cover bg-green-400"
 					/>
-					<div className="">
-						<p className="font-medium">
+					<div className="montserrat">
+						<p className="font-semibold">
 							Pada materi Koloid dalam Si-KOLO terdiri dari 3
 							Ruang Lingkup Materi:
 						</p>
@@ -109,8 +109,8 @@ export default function LandingPage() {
 
 			{/* fasilitas pembelajaran */}
 			<section id="fasilitas-pembelajaran" className="py-8 w-full">
-				<h1 className="text-center text-2xl text-primary underline underline-offset-8 font-bold px-4 leading-normal">
-					Temukan Fasilitas Pembelajaran Si-KOLO di Sini!
+				<h1 className="text-center text-2xl md:text-4xl tracking-wider haettenschweiler text-primary underline underline-offset-8 font-bold px-4 leading-normal">
+					Temukan Fasilitas Pembelajaran Si-<span className="text-primary-e8">KOLO di Sini!</span>
 				</h1>
 				<div className="flex flex-col px-4 mt-8 w-full max-w-screen-xl mx-auto gap-8 md:px-8">
 					{[
@@ -188,10 +188,10 @@ export default function LandingPage() {
 								className="w-3/4"
 							/>
 							<div>
-								<h2 className="text-primary text-2xl font-semibold">
+								<h2 className="text-primary text-2xl font-semibold blogger-sans">
 									{item.title}
 								</h2>
-								<p className="">{item.desc}</p>
+								<p className="arial">{item.desc}</p>
 							</div>
 						</Link>
 					))}
@@ -200,9 +200,9 @@ export default function LandingPage() {
 
 			{/* kelebihan */}
 			<section id="kelebihan" className="py-8 w-full">
-				<h1 className="text-center text-2xl text-primary underline underline-offset-8 font-bold px-4 leading-normal">
-					Kelebihan Menggunakan Si-KOLO Sebagai Bahan Ajar Kimia
-					Koloid
+				<h1 className="text-center text-2xl md:text-4xl tracking-wider haettenschweiler text-primary underline underline-offset-8 font-bold px-4 leading-normal">
+					Kelebihan Menggunakan Si-<span className="text-primary-e8">KOLO Sebagai Bahan Ajar Kimia
+					Koloid</span>
 				</h1>
 				<div className="grid grid-cols-1 mt-4 px-4 gap-4 md:grid-cols-3 lg:grid-cols-4 max-w-screen-xl mx-auto">
 					{[
@@ -241,7 +241,7 @@ export default function LandingPage() {
 								src={x.illustration}
 								alt={x.text}
 							/>
-							<p className="font-medium text-primary text-center">
+							<p className="font-medium text-primary text-center arial">
 								{x.text}
 							</p>
 						</div>
@@ -254,14 +254,15 @@ export default function LandingPage() {
 
 			<section id="pengembang" className="bg-[#afcbd6] w-full py-12">
 				<div className="max-w-screen-xl mx-auto px-4 flex flex-col lg:px-12">
-					<h1 className="text-[#c80000] text-3xl font-bold text-center flex flex-col items-center">
+					<h1 className="text-[#c80000] text-3xl font-bold impact text-center flex flex-col items-center md:flex-row md:justify-center gap-2">
 						Tim Pengembang{" "}
-						<span className="flex items-center">
+						<span className="flex items-center blogger-sans md:relative md:top-1.5">
 							S
 							<img
 								src={maskot}
 								alt="Maskot si kolo"
-								className="h-7 md:h-18 object-cover inline"
+								style={{ height: "1em" }}
+								className="object-cover inline relative bottom-1"
 							/>{" "}
 							- <span className="text-primary-e8">KOLO</span>
 						</span>
@@ -287,7 +288,7 @@ export default function LandingPage() {
 									alt={`Foto ${item.name}`}
 									className={`bg-c8 ${ i === 0 && "pt-3 lg:pt-4" } md:w-3/5`}
 								/>
-								<p>{item.name}</p>
+								<p className="gilroy-extrabold">{item.name}</p>
 							</div>
 						))}
 					</div>
@@ -297,7 +298,7 @@ export default function LandingPage() {
 							alt="Foto Herunata, S.Pd., M.Pd."
                             className="md:w-1/4"
 						/>
-						<div className="flex flex-col text-center font-bold gap-2 md:text-left">
+						<div className="flex flex-col text-center font-bold gap-2 md:text-left gilroy-extrabold">
 							<h3 className="text-3xl underline font-bold">
 								Herunata, S.Pd., M.Pd.
 							</h3>
