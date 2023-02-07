@@ -235,6 +235,7 @@ export default function LandingPage() {
 									eksplorasi konseptual pada peserta didik.
 								</span>
 							),
+							to: "/ruang-lingkup-1",
 						},
 						{
 							illustration: illustration3,
@@ -253,6 +254,7 @@ export default function LandingPage() {
 									karya dari proyek yang diberikan.
 								</span>
 							),
+							to: "/ruang-lingkup-2",
 						},
 						{
 							illustration: illustration4,
@@ -272,9 +274,11 @@ export default function LandingPage() {
 									peserta didik.
 								</span>
 							),
+							to: "/ruang-lingkup-3",
 						},
 					].map((item, i) => (
-						<div
+						<Link
+							to={item.to}
 							key={i}
 							className={`flex flex-col items-center md:gap-4 xl:gap-8 ${
 								i % 2 === 0
@@ -293,7 +297,7 @@ export default function LandingPage() {
 								</h2>
 								<p className="">{item.desc}</p>
 							</div>
-						</div>
+						</Link>
 					))}
 				</div>
 			</section>
