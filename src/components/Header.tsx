@@ -33,6 +33,24 @@ const menus = [
 export default function Header(props: Props) {
 	const [openMenu, setOpenMenu] = useState(false);
 
+	const dropdownMenu = () => (
+		<Menu shadow="md" width={200}>
+			<Menu.Target>
+				<button className="bg-primary-f5 py-2 px-3 rounded-md text-white">
+					Lainnya
+				</button>
+			</Menu.Target>
+			<Menu.Dropdown>
+				<Menu.Item>Daftar Pustaka</Menu.Item>
+				<Menu.Item>
+					<Link to="/profil">
+						Profil Tim Pengembang
+					</Link>
+				</Menu.Item>
+			</Menu.Dropdown>
+		</Menu>
+	);
+
 	return (
 		<header className="w-full">
 			<div className="max-w-screen-lg w-full mx-auto flex justify-between px-4 py-2 md:px-6">
@@ -71,19 +89,7 @@ export default function Header(props: Props) {
 										{menu.text}
 									</Link>
 								))}
-								<Menu shadow="md" width={200}>
-									<Menu.Target>
-										<button className="bg-primary-f5 py-2 px-3 rounded-md text-white">
-											Lainnya
-										</button>
-									</Menu.Target>
-									<Menu.Dropdown>
-										<Menu.Item>Daftar Pustaka</Menu.Item>
-										<Menu.Item>
-											Profil Tim Pengembang
-										</Menu.Item>
-									</Menu.Dropdown>
-								</Menu>
+								{ dropdownMenu() }
 							</div>
 						)}
 					</Transition>
@@ -100,17 +106,7 @@ export default function Header(props: Props) {
 							{menu.text}
 						</Link>
 					))}
-					<Menu shadow="md" width={200}>
-						<Menu.Target>
-							<button className="bg-primary-f5 py-2 px-3 rounded-md text-white">
-								Lainnya
-							</button>
-						</Menu.Target>
-						<Menu.Dropdown>
-							<Menu.Item>Daftar Pustaka</Menu.Item>
-							<Menu.Item>Profil Tim Pengembang</Menu.Item>
-						</Menu.Dropdown>
-					</Menu>
+					{ dropdownMenu() }
 				</div>
 			</div>
 		</header>
