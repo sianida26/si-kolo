@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Burger, Menu, Transition } from "@mantine/core";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, ScrollRestoration } from "react-router-dom";
 
 interface Props {
 	background?: string;
@@ -17,11 +17,11 @@ const menus = [
 		text: "Capaian dan Tujuan",
 	},
 	{
-		to: "/",
+		to: "/#mind-map",
 		text: "Mind Map",
 	},
 	{
-		to: "/",
+		to: "/#materi",
 		text: "Materi Pembelajaran",
 	},
 	{
@@ -53,16 +53,19 @@ export default function Header(props: Props) {
 
 	return (
 		<header className="w-full">
+			<ScrollRestoration />
 			<div className="max-w-screen-lg w-full mx-auto flex justify-between px-4 py-2 md:px-6">
 				{/* ganjel sm */}
 				<div className="md:hidden" />
 
 				{/* logo */}
-				<img
-					src={logo}
-					alt="Logo Si-Kolo"
-					className="w-14 object-cover"
-				/>
+				<Link to="/">
+					<img
+						src={logo}
+						alt="Logo Si-Kolo"
+						className="w-14 object-cover"
+					/>
+				</Link>
 
 				{/* menu icon */}
 				<div className="flex-center md:hidden">

@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Burger, Menu, Transition } from "@mantine/core";
-import { Link } from "react-router-dom";
+import { useScrollIntoView } from '@mantine/hooks';
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import maskot from "../assets/maskot.png";
 import illustration1 from "../assets/illustration1.svg";
@@ -24,6 +25,15 @@ import Header from "../components/Header"
 import Footer from "../components/Footer";
 
 export default function LandingPage() {
+
+	const { scrollIntoView: scrollIntoMindMap, targetRef: mindMapRef } = useScrollIntoView<HTMLDivElement>();
+	const { scrollIntoView: scrollIntoMateri, targetRef: materiRef } = useScrollIntoView<HTMLDivElement>();
+	const location = useLocation()
+
+	useEffect(() => {
+		if (location.hash === "#mind-map") scrollIntoMindMap()
+		if (location.hash === "#materi") scrollIntoMateri()
+	}, [location])
 
 	return (
 		<div className="max-w-screen">
@@ -62,7 +72,7 @@ export default function LandingPage() {
 			</div>
 
 			{/* mind map */}
-			<section id="mind-map" className="py-8 w-full">
+			<section id="mind-map" className="py-8 w-full" ref={ mindMapRef }>
 				<h1 className="text-center text-3xl md:text-4xl tracking-wider haettenschweiler text-primary underline underline-offset-8 font-bold px-4 pb-8 leading-normal">
 					Mind Map Ruang Lingkup Kimia Koloid
 				</h1>
@@ -79,25 +89,25 @@ export default function LandingPage() {
 						</p>
 						<ol className="list-decimal list-inside mt-3 flex flex-col gap-2 md:mt-6">
 							<li>
-								<span className="font-semibold text-primary underline">
+								<Link to="/ruang-lingkup-1" className="font-semibold text-primary underline">
 									Ruang Lingkup 1
-								</span>
+								</Link>
 								<p className="pl-4 italic">
 									Sistem Koloid dan Jenis-Jenisnya
 								</p>
 							</li>
 							<li>
-								<span className="font-semibold text-primary underline">
+								<Link to="/ruang-lingkup-2" className="font-semibold text-primary underline">
 									Ruang Lingkup 2
-								</span>
+								</Link>
 								<p className="pl-4 italic">
 									Sifat-Sifat Koloid
 								</p>
 							</li>
 							<li>
-								<span className="font-semibold text-primary underline">
+								<Link to="/ruang-lingkup-3" className="font-semibold text-primary underline">
 									Ruang Lingkup 3
-								</span>
+								</Link>
 								<p className="pl-4 italic">
 									Pembentukan Koloid
 								</p>
@@ -108,7 +118,7 @@ export default function LandingPage() {
 			</section>
 
 			{/* fasilitas pembelajaran */}
-			<section id="fasilitas-pembelajaran" className="py-8 w-full">
+			<section id="fasilitas-pembelajaran" ref={ materiRef } className="py-8 w-full">
 				<h1 className="text-center text-2xl md:text-4xl tracking-wider haettenschweiler text-primary underline underline-offset-8 font-bold px-4 pb-8 leading-normal">
 					Temukan Fasilitas Pembelajaran Si-<span className="text-primary-e8">KOLO di Sini!</span>
 				</h1>
