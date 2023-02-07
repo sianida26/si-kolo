@@ -9,7 +9,7 @@ export default function RuangLingkup1() {
 
   return (
     <div className="max-w-screen">
-      <div className="w-full relative bg-[#0E66D2] min-h-screen flex flex-col items-center">
+      <div className="w-full relative bg-[#0E66D2]  flex flex-col items-center">
         {/* Header */}
         <header className="w-full">
           <div className="max-w-screen-lg w-full mx-auto flex justify-between px-4 py-2 md:px-6">
