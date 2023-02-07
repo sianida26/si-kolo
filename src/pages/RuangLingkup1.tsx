@@ -3,11 +3,11 @@ import { Burger, Menu, Transition } from "@mantine/core";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import judulRuangLingkup1 from "../assets/judulRuangLingkup1.png";
-import gambar1 from "../assets/gambar1.png";
-import gambar2 from "../assets/gambar2.png";
-import gambar3 from "../assets/gambar3.png";
-import gambar4 from "../assets/gambar4.png";
-import gambar5 from "../assets/gambar5.png";
+import gambar1 from "../assets/gambar1_1.png";
+import gambar2 from "../assets/gambar2_1.png";
+import gambar3 from "../assets/gambar3_1.png";
+import gambar4 from "../assets/gambar4_1.png";
+import gambar5 from "../assets/gambar5_1.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { getPdfUrl } from "../utils/helper";
@@ -17,7 +17,7 @@ export default function RuangLingkup1() {
 
   return (
     <div className="max-w-screen">
-      <div className="w-full relative bg-[#0E66D2]  flex flex-col items-center">
+      <div className="w-full relative bg-[#0E66D2] flex flex-col items-center">
         {/* Header */}
         <Header background="bg-[#0E66D2]"/>
         <img src={judulRuangLingkup1} />
