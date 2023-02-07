@@ -63,10 +63,10 @@ export default function LandingPage() {
 
 			{/* mind map */}
 			<section id="mind-map" className="py-8 w-full">
-				<h1 className="text-center text-3xl md:text-4xl tracking-wider haettenschweiler text-primary underline underline-offset-8 font-bold px-4 leading-normal">
+				<h1 className="text-center text-3xl md:text-4xl tracking-wider haettenschweiler text-primary underline underline-offset-8 font-bold px-4 pb-8 leading-normal">
 					Mind Map Ruang Lingkup Kimia Koloid
 				</h1>
-				<div className="flex flex-col px-4 mt-4 md:flex-row w-full md:gap-2 max-w-screen-xl mx-auto md:items-center">
+				<div className="flex flex-col px-4 mt-4 md:flex-row w-full gap-4 max-w-screen-xl mx-auto md:items-center">
 					<img
 						src={mindmap}
 						alt="Mindmap"
@@ -77,7 +77,7 @@ export default function LandingPage() {
 							Pada materi Koloid dalam Si-KOLO terdiri dari 3
 							Ruang Lingkup Materi:
 						</p>
-						<ol className="list-decimal list-inside mt-2 flex flex-col gap-2 md:mt-6">
+						<ol className="list-decimal list-inside mt-3 flex flex-col gap-2 md:mt-6">
 							<li>
 								<span className="font-semibold text-primary underline">
 									Ruang Lingkup 1
@@ -109,7 +109,7 @@ export default function LandingPage() {
 
 			{/* fasilitas pembelajaran */}
 			<section id="fasilitas-pembelajaran" className="py-8 w-full">
-				<h1 className="text-center text-2xl md:text-4xl tracking-wider haettenschweiler text-primary underline underline-offset-8 font-bold px-4 leading-normal">
+				<h1 className="text-center text-2xl md:text-4xl tracking-wider haettenschweiler text-primary underline underline-offset-8 font-bold px-4 pb-8 leading-normal">
 					Temukan Fasilitas Pembelajaran Si-<span className="text-primary-e8">KOLO di Sini!</span>
 				</h1>
 				<div className="flex flex-col px-4 mt-8 w-full max-w-screen-xl mx-auto gap-8 md:px-8">
@@ -200,7 +200,7 @@ export default function LandingPage() {
 
 			{/* kelebihan */}
 			<section id="kelebihan" className="py-8 w-full">
-				<h1 className="text-center text-2xl md:text-4xl tracking-wider haettenschweiler text-primary underline underline-offset-8 font-bold px-4 leading-normal">
+				<h1 className="text-center text-2xl md:text-4xl tracking-wider haettenschweiler text-primary underline underline-offset-8 font-bold px-4 pb-8 leading-normal">
 					Kelebihan Menggunakan Si-<span className="text-primary-e8">KOLO Sebagai Bahan Ajar Kimia
 					Koloid</span>
 				</h1>
@@ -254,7 +254,7 @@ export default function LandingPage() {
 
 			<section id="pengembang" className="bg-[#afcbd6] w-full py-12">
 				<div className="max-w-screen-xl mx-auto px-4 flex flex-col lg:px-12">
-					<h1 className="text-[#c80000] text-3xl font-bold impact text-center flex flex-col items-center md:flex-row md:justify-center gap-2">
+					<h1 className="text-[#c80000] text-3xl font-bold impact text-center flex flex-col items-center md:flex-row md:justify-center gap-2 pb-8">
 						Tim Pengembang{" "}
 						<span className="flex items-center blogger-sans md:relative md:top-1.5">
 							S
