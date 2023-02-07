@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Burger, Menu, Transition } from "@mantine/core";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import maskot from "../assets/maskot.png";
 import illustration1 from "../assets/illustration1.svg";
@@ -57,12 +58,12 @@ export default function LandingPage() {
 										>
 											Beranda
 										</a>
-										<a
-											href="#"
+										<Link
+											to="/capaian-dan-tujuan-pembelajaran"
 											className="px-4 text-center font-semibold"
 										>
 											Capaian dan Tujuan
-										</a>
+										</Link>
 										<a
 											href="#"
 											className="px-4 text-center font-semibold"
@@ -106,9 +107,9 @@ export default function LandingPage() {
 							<a href="#" className="text-center font-semibold">
 								Beranda
 							</a>
-							<a href="#" className="text-center font-semibold">
+							<Link to="/capaian-dan-tujuan-pembelajaran" className="text-center font-semibold">
 								Capaian dan Tujuan
-							</a>
+							</Link>
 							<a href="#" className="text-center font-semibold">
 								Mind Map
 							</a>
