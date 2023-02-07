@@ -50,12 +50,12 @@ export default function Profil() {
 		<div className="max-w-screen">
 			<div className="max-w-screen-xl mx-auto px-4">
 				<Header background="bg-white" />
-				<h1 className="text-primary-e5 text-3xl md:text-5xl font-bold underline text-center mt-4">
+				<h1 className="text-primary-e5 text-3xl haettenschweiler tracking-wider md:text-5xl font-bold uppercase underline text-center mt-6">
 					Profil Portofolio
 				</h1>
-				<h2 className="text-c8 text-2xl md:text-4xl font-bold text-center flex items-center justify-center gap-1 md:mt-2">
+				<h2 className="text-c8 text-2xl md:text-4xl font-bold text-center impact flex items-center justify-center gap-1 mt-8 mb-12">
 					<span>Tim Pengembang </span>
-					<span className="flex items-center">
+					<span className="flex items-center blogger-sans">
 						S
 						<img
 							src={maskot}
@@ -67,7 +67,7 @@ export default function Profil() {
 					</span>
 				</h2>
 
-				<div className="mt-4 flex flex-col text-xl text-center md:text-left font-medium gap-4">
+				<div className="mt-4 flex flex-col text-xl text-center md:text-left font-medium gap-4 gilroy-extrabold">
 					{profiles.map((profile, i) => (
 						<div
 							className="flex flex-col items-center md:flex-row md:gap-6 md:items-start"

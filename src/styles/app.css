@@ -4,3 +4,8 @@
     background-repeat: no-repeat;
     background-color: #0E66D2 /* url(../assets/img-noise-361x370.png) no-repeat fixed center !important */;
 }
+
+.judul{
+    font-family: 'Haettenschweiler', sans-serif;
+    letter-spacing: 0.05em;
+}
