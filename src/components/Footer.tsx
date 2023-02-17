@@ -11,21 +11,21 @@ export default function Footer() {
 						className="w-12 object-cover md:w-32"
 					/>
 				</div>
-				<div className="flex flex-col gap-4 md:flex-grow">
+				<div className="flex flex-col gap-4 md:flex-grow lg:gap-0 lg:self-center">
 					<div className="flex flex-col gap-6 lg:flex-row lg:justify-between">
-						<div className="text-center">
-							<p className="text-2xl font-black impact">
+						<div className="text-center lg:text-left">
+							<p className="text-2xl lg:text-3xl font-black impact">
 								Kelompok Peminatan MIPA
 							</p>
-							<p className="text-xl font-medium lg:whitespace-nowrap arial">
+							<p className="text-xl font-medium lg:whitespace-nowrap arial lg:mt-2">
 								Untuk SMA/MA/Sederajat Kelas XI Fase F
 							</p>
 						</div>
 						<div className="flex flex-col text-center lg:items-end">
-							<p className="text-lg font-medium text-primary lg:text-right arial">
+							<p className="text-lg font-medium text-primary lg:text-right arial lg:text-xl">
 								Ada Pertanyaan?
 							</p>
-							<p className="text-sm lg:text-right montserrat">
+							<p className="text-sm lg:text-right montserrat lg:text-lg">
 								Hubungi Cp Sosmed untuk mendapatkan informasi
 								selengkapnya mengenai project ini
 							</p>
@@ -47,7 +47,7 @@ export default function Footer() {
 								</button>
 							))}
 						</div>
-						<p className="text-xs text-center lg:order-1 montserrat">
+						<p className="text-xs lg:text-base text-center lg:order-1 montserrat">
 							Share this website content to your community/agency
 						</p>
 						<button className="bg-gradient-to-l from-[#f082c2] to-[#d1579d] px-3 py-2 rounded-lg text-white gilroy-extrabold self-center font-medium lg:order-3">

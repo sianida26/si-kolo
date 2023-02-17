@@ -41,19 +41,19 @@ export default function LandingPage() {
 				<Header />
 				<div className="flex-grow flex flex-col justify-center py-8 md:flex-row max-w-screen-xl">
 					<div className="flex flex-col text-primary-f0 font-bold px-4 md:justify-center md:px-6">
-						<div className="text-4xl text-center blogger-sans flex items-center justify-center md:justify-start md:text-7xl">
+						<div className="text-4xl text-center blogger-sans flex items-center justify-center md:justify-start md:text-7xl lg:text-8xl">
 							S
 							<img
 								src={maskot}
 								alt="Maskot si kolo"
-								className="h-9 md:h-18 object-cover inline"
+								className="h-[1em] object-cover inline"
 							/>{" "}
 							- <span className="text-primary-e8">KOLO</span>
 						</div>
-						<h2 className="text-2xl md:text-3xl blogger-sans text-center md:text-left">
+						<h2 className="text-2xl md:text-3xl lg:text-4xl blogger-sans text-center md:text-left">
 							Sistem Koloid #KimiAsyik
 						</h2>
-						<p className="text-black font-normal montserrat text-center mt-4 md:text-left">
+						<p className="text-black font-normal montserrat text-center mt-4 md:text-left lg:text-xl">
 							<strong className="text-primary">Si-KOLO</strong>{" "}
 							merupakan terobosan pengembangan media pembelajaran
 							online berbasis website yang dikembangkan oleh
@@ -72,7 +72,7 @@ export default function LandingPage() {
 			</div>
 
 			{/* mind map */}
-			<section id="mind-map" className="py-8 w-full" ref={ mindMapRef }>
+			<section id="" className="py-8 w-full" ref={ mindMapRef }>
 				<h1 className="text-center text-3xl md:text-4xl tracking-wider haettenschweiler text-primary underline underline-offset-8 font-bold px-4 leading-normal">
 					Mind Map Ruang Lingkup Kimia Koloid
 				</h1>
@@ -198,10 +198,10 @@ export default function LandingPage() {
 								className="w-3/4"
 							/>
 							<div>
-								<h2 className="text-primary text-2xl font-semibold blogger-sans">
+								<h2 className="text-primary text-2xl font-semibold blogger-sans lg:text-3xl">
 									{item.title}
 								</h2>
-								<p className="arial">{item.desc}</p>
+								<p className="arial lg:text-xl">{item.desc}</p>
 							</div>
 						</Link>
 					))}
@@ -277,7 +277,7 @@ export default function LandingPage() {
 							- <span className="text-primary-e8">KOLO</span>
 						</span>
 					</h1>
-					<div className="grid grid-cols-1 md:grid-cols-3 font-medium text-center text-xl gap-8 mt-8 lg:gap-12">
+					<div className="grid grid-cols-1 md:grid-cols-3 font-medium text-center text-xl gap-8 mt-8 lg:gap-12 md:order-3 lg:max-w-screen-lg lg:px-12 lg:self-center">
 						{[
 							{
 								image: fotoKarina,
@@ -292,23 +292,23 @@ export default function LandingPage() {
 								name: "Melinda Cahyawati, S.Si.",
 							},
 						].map((item, i) => (
-							<div key={i} className="flex flex-col items-center">
+							<div key={i} className="flex flex-col items-center md:gap-2">
 								<img
 									src={item.image}
 									alt={`Foto ${item.name}`}
-									className={`bg-c8 ${ i === 0 && "pt-3 lg:pt-4" } md:w-3/5`}
+									className={`bg-c8 ${ i === 0 && "pt-3 lg:pt-4" } md:w-3/5 lg:w-full`}
 								/>
-								<p className="gilroy-extrabold">{item.name}</p>
+								<p className="gilroy-extrabold font-bold">{item.name}</p>
 							</div>
 						))}
 					</div>
-					<div className="flex flex-col mt-8 md:flex-row md:items-end md:gap-8">
+					<div className="flex flex-col mt-8 md:items-center md:gap-2 md:order-2">
 						<img
 							src={fotoHerunata}
 							alt="Foto Herunata, S.Pd., M.Pd."
                             className="md:w-1/4"
 						/>
-						<div className="flex flex-col text-center font-bold gap-2 md:text-left gilroy-extrabold">
+						<div className="flex flex-col text-center font-bold gap-2 gilroy-extrabold">
 							<h3 className="text-3xl underline font-bold">
 								Herunata, S.Pd., M.Pd.
 							</h3>

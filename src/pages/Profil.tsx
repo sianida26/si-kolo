@@ -5,6 +5,7 @@ import eko from "../assets/eko.png";
 import melinda from "../assets/melinda.png";
 import karina from "../assets/karina.png";
 import Footer from "../components/Footer";
+import { getPdfUrl } from "../utils/helper";
 
 const profiles = [
 	{
@@ -15,6 +16,7 @@ const profiles = [
 			"Pengajaran dan Pembelajaran Daring & Bauran PPG Kimia Pra-Jabatan 2022 Gelombang 2",
 			"Expertise in Assessment",
 		],
+		cv: "cv-herunata.pdf"
 	},
 	{
 		image: eko,
@@ -24,6 +26,7 @@ const profiles = [
 			"PPG Kimia Pra-Jabatan 2022 Gelombang 2",
 			"Universitas Negeri Malang",
 		],
+		cv: "cv-eko.pdf"
 	},
 	{
 		image: melinda,
@@ -33,6 +36,7 @@ const profiles = [
 			"PPG Kimia Pra-Jabatan 2022 Gelombang 2",
 			"Universitas Negeri Malang",
 		],
+		cv: "cv-melinda.pdf"
 	},
 	{
 		image: karina,
@@ -42,6 +46,7 @@ const profiles = [
 			"PPG Kimia Pra-Jabatan 2022 Gelombang 2",
 			"Universitas Negeri Malang",
 		],
+		cv: "cv-karina.pdf"
 	},
 ];
 
@@ -67,7 +72,7 @@ export default function Profil() {
 					</span>
 				</h2>
 
-				<div className="mt-4 flex flex-col text-xl text-center md:text-left font-medium gap-4 gilroy-extrabold">
+				<div className="mt-4 flex flex-col text-xl text-center md:text-left font-medium gap-4 lg:gap-8 gilroy-extrabold">
 					{profiles.map((profile, i) => (
 						<div
 							className="flex flex-col items-center md:flex-row md:gap-6 md:items-start"
@@ -87,6 +92,9 @@ export default function Profil() {
 										{desc}
 									</p>
 								))}
+								<div className="mt-2">
+									<iframe src={ getPdfUrl(profile.cv) } className="w-full h-96 md:w-[560px] md:h-[620px] border"></iframe>
+								</div>
 							</div>
 						</div>
 					))}

@@ -24,9 +24,24 @@ const menus = [
 		to: "/#materi",
 		text: "Materi Pembelajaran",
 	},
+];
+
+const latihans = [
 	{
-		to: "/",
-		text: "Mari Berlatih",
+		caption: "Latihan soal pembuatan koloid",
+		url: "https://docs.google.com/forms/d/1vHBdvwniU9qgUo_LgRyY-SZ3JBF021g0hduvWZ8135w",
+	},
+	{
+		caption: "Latihan soal sifat koloid",
+		url: "https://docs.google.com/forms/d/1WyMpJtVcAy0PWAP-0vfrNRuFy7HDk2OesM0oOUlHNKg",
+	},
+	{
+		caption: "Latihan soal jenis-jenis koloid",
+		url: "https://forms.gle/EytPn81FoUKNMD9w5",
+	},
+	{
+		caption: "Latihan soal sistem koloid",
+		url: "https://forms.gle/dyoHrHcjw2m2QkXdA",
 	},
 ];
 
@@ -34,14 +49,14 @@ export default function Header(props: Props) {
 	const [openMenu, setOpenMenu] = useState(false);
 
 	const dropdownMenu = () => (
-		<Menu shadow="md" width={200} >
+		<Menu shadow="md" width={200}>
 			<Menu.Target>
 				<button className="bg-primary-f5 py-2 px-3 rounded-md text-white montserrat">
 					Lainnya
 				</button>
 			</Menu.Target>
 			<Menu.Dropdown>
-				<Menu.Item className="montserrat">Daftar Pustaka</Menu.Item>
+				<Menu.Item className="montserrat">Daftar Rujukan</Menu.Item>
 				<Menu.Item>
 					<Link to="/profil" className="montserrat">
 						Profil Tim Pengembang
@@ -51,10 +66,29 @@ export default function Header(props: Props) {
 		</Menu>
 	);
 
+	const dropdownLatihanSoal = () => (
+		<Menu shadow="md" width={200}>
+			<Menu.Target>
+				<button className="px-4 md:px-0 text-center font-semibold">
+					Mari Berlatih
+				</button>
+			</Menu.Target>
+			<Menu.Dropdown>
+				{
+					latihans.map((latihan,i) => <Menu.Item key={ i }>
+						<Link to={ latihan.url } target={"_blank"}>
+							{ latihan.caption }
+						</Link>
+					</Menu.Item>)
+				}
+			</Menu.Dropdown>
+		</Menu>
+	);
+
 	return (
-		<header className="w-full">
+		<header className="w-full relative z-10">
 			<ScrollRestoration />
-			<div className="max-w-screen-lg w-full mx-auto flex justify-between px-4 py-2 md:px-6">
+			<div className="max-w-screen-xl w-full mx-auto flex justify-between px-4 py-2 md:px-6">
 				{/* ganjel sm */}
 				<div className="md:hidden" />
 
@@ -63,7 +97,7 @@ export default function Header(props: Props) {
 					<img
 						src={logo}
 						alt="Logo Si-Kolo"
-						className="w-14 object-cover"
+						className="w-14 lg:w-18 object-cover"
 					/>
 				</Link>
 
@@ -92,14 +126,15 @@ export default function Header(props: Props) {
 										{menu.text}
 									</Link>
 								))}
-								{ dropdownMenu() }
+								{dropdownLatihanSoal()}
+								{dropdownMenu()}
 							</div>
 						)}
 					</Transition>
 				</div>
 
 				{/* right side */}
-				<div className="hidden md:flex text-primary gap-4 items-center">
+				<div className="hidden md:flex text-primary gap-2 lg:gap-6 items-center">
 					{menus.map((menu, i) => (
 						<Link
 							key={i}
@@ -109,7 +144,8 @@ export default function Header(props: Props) {
 							{menu.text}
 						</Link>
 					))}
-					{ dropdownMenu() }
+					{dropdownLatihanSoal()}
+					{dropdownMenu()}
 				</div>
 			</div>
 		</header>
